@@ -30,7 +30,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   DateTime? _selectedDate;
   String _selectedDeliveryType = 'pickup';
   String _selectedRentalPeriod = 'week';
-  
+  String? _selectedCategory;
+
   int get cartItemCount => _cartItems.length;
 
 
@@ -207,12 +208,6 @@ IconButton(
             },
           ),
         ],
-        bottom: TabBar(
-          controller: _tabController,
-          tabs: [
-            Tab(text: 'Инвентарь'),
-          ],
-        ),
       ),
       body: TabBarView(
         controller: _tabController,
@@ -237,6 +232,7 @@ IconButton(
                     ? Center(child: CircularProgressIndicator())
                     : _equipment.isEmpty
                         ? Center(child: Text('Нет доступного инвентаря'))
+                        
                         : ListView.builder(
                             itemCount: _equipment.length,
                             itemBuilder: (context, index) {
@@ -282,20 +278,20 @@ trailing: Container(
       Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(
-            width: 90, // Фиксированная ширина для кнопки
-            height: 30, // Фиксированная высота для кнопки
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 4),
-                textStyle: TextStyle(fontSize: 12),
-              ),
-              onPressed: () {
-                // Навигация к экрану деталей
-              },
-              child: Text('Подробнее'),
-            ),
-          ),
+          // SizedBox(
+          //   width: 90, // Фиксированная ширина для кнопки
+          //   height: 30, // Фиксированная высота для кнопки
+          //   child: ElevatedButton(
+          //     style: ElevatedButton.styleFrom(
+          //       padding: EdgeInsets.symmetric(horizontal: 4),
+          //       textStyle: TextStyle(fontSize: 12),
+          //     ),
+          //     onPressed: () {
+          //       // Навигация к экрану деталей
+          //     },
+          //     child: Text('Подробнее'),
+          //   ),
+          // ),
           SizedBox(width: 4), // Отступ между кнопкой и иконкой
           SizedBox(
             width: 30, // Фиксированная ширина для иконки
@@ -398,9 +394,22 @@ void _showCart() {
               DropdownButton<String>(
                 value: _selectedRentalPeriod,
                 items: [
-                  DropdownMenuItem(value: 'week', child: Text('1 неделя - 5000 тг')),
-                  DropdownMenuItem(value: 'twoWeeks', child: Text('2 недели - 7000 тг')),
-                  DropdownMenuItem(value: 'month', child: Text('1 месяц - 14000 тг')),
+                  DropdownMenuItem(
+                    value: 'day',
+                    child: Text('1 день'),
+                  ),
+                  DropdownMenuItem(
+                    value: 'week',
+                    child: Text('1 неделя'),
+                  ),
+                  DropdownMenuItem(
+                    value: 'twoWeeks',
+                    child: Text('2 недели (скидка 40%)'),
+                  ),
+                  DropdownMenuItem(
+                    value: 'month',
+                    child: Text('1 месяц'),
+                  ),
                 ],
                 onChanged: (value) {
                   setState(() {
@@ -533,35 +542,43 @@ Future<void> _selectDate(BuildContext context) async {
 String _getRentalPrice(Equipment item) {
   switch (_selectedRentalPeriod) {
     case 'week':
-      return '5000 тг/неделя';
+      return '${item.rentalPrices['week']} тг/неделя';
     case 'twoWeeks':
-      return '7000 тг/2 недели';
+      return '${(item.rentalPrices['week']! * 1.4).round()} тг/2 недели'; // 40% скидка от двух недель
     case 'month':
-      return '14000 тг/месяц';
+      return '${item.rentalPrices['month']} тг/месяц';
     default:
-      return '5000 тг/неделя';
+      return '${item.rentalPrices['day']} тг/день';
   }
 }
 
 int _calculateTotal() {
-  int basePrice;
-  switch (_selectedRentalPeriod) {
-    case 'week':
-      basePrice = 5000;
-      break;
-    case 'twoWeeks':
-      basePrice = 7000;
-      break;
-    case 'month':
-      basePrice = 14000;
-      break;
-    default:
-      basePrice = 5000;
-  }
+  double total = 0;
   
-  int deliveryFee = _selectedDeliveryType == 'delivery' ? 1000 : 0;
-  return (basePrice * _cartItems.length) + deliveryFee;
+  for (var item in _cartItems) {
+    switch (_selectedRentalPeriod) {
+      case 'week':
+        total += item.rentalPrices['week']!;
+        break;
+      case 'twoWeeks':
+        total += (item.rentalPrices['week']! * 1.4); // 40% скидка от двух недель
+        break;
+      case 'month':
+        total += item.rentalPrices['month']!;
+        break;
+      default:
+        total += item.rentalPrices['day']!;
+    }
+  }
+
+  // Добавляем стоимость доставки
+  if (_selectedDeliveryType == 'delivery') {
+    total += 1000;
+  }
+
+  return total.round();
 }
+
 
 void _processOrder() {
   if (_selectedDate == null) {

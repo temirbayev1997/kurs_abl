@@ -214,6 +214,426 @@ class EquipmentService {
         rating: 4.8,
         reviewCount: 30,
       ),
+      Equipment(
+        id: '11',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '12',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '13',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '14',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '15',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '16',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '17',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '18',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '19',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '20',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '21',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '22',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '23',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '24',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '25',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '26',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '27',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '28',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '29',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      ),
+      Equipment(
+        id: '30',
+        name: 'Гантели разборные',
+        description: 'Набор разборных гантелей с блинами',
+        images: [
+          'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
+        ],
+        specifications: {
+          'Максимальный вес': '20кг каждая',
+          'Материал': 'Сталь',
+          'Комплектация': 'Гриф, блины, замки',
+        },
+        condition: 'Отличное',
+        rentalPrices: {
+          'day': 2000.0,
+          'week': 12000.0,
+          'month': 40000.0,
+        },
+        rating: 4.8,
+        reviewCount: 30,
+      )
     ];
   }
 
