@@ -1,8 +1,16 @@
+</manifest>
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <application
+    
         android:label="work_kursovaya"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDAKV-O_4Plg0wEUEK9RUL4nDKB0jo5kCI"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

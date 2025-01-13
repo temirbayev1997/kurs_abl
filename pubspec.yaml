@@ -23,6 +23,10 @@ dependencies:
   intl: ^0.18.1
   image_picker: ^0.8.4+4
   flutter_local_notifications: ^9.1.5
+  # maps google
+  google_maps_flutter: ^2.5.0
+  location: ^5.0.3
+  geocoding: ^2.1.1
 
 dev_dependencies:
   flutter_test:

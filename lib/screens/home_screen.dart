@@ -8,6 +8,7 @@ import '../models/user_loyalty.dart';
 import '../services/loyalty_service.dart';
 import '../widgets/loyalty_widget.dart';
 import '../models/category.dart';
+// AIzaSyDAKV-O_4Plg0wEUEK9RUL4nDKB0jo5kCI api keys - google maps
 
 class HomeScreen extends StatefulWidget {
   @override
