@@ -270,13 +270,13 @@ Equipment(
       ),
       Equipment(
         id: '13',
-        name: 'Гантели разборные',
+        name: 'Гантели разборные(1шт)',
         description: 'Набор разборных гантелей с блинами',
         images: [
           'https://images.satu.kz/198766411_w640_h640_198766411.jpg',
         ],
         specifications: {
-          'Максимальный вес': '20кг каждая',
+          'Максимальный вес': '15кг каждая',
           'Материал': 'Сталь',
           'Комплектация': 'Гриф, блины, замки',
         },
@@ -286,9 +286,9 @@ Equipment(
           'week': 12000,
           'month': 40000,
         },
-        rating: 4.8,
-        reviewCount: 30,
-        category: 'Лыжи',
+        rating: 4.1,
+        reviewCount: 10,
+        category: 'Тяжелые Инвентарь',
       ),
       Equipment(
         id: '14',
