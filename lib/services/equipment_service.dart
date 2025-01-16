@@ -591,12 +591,14 @@ Equipment(
         .toList();
   }
 
-  Future<List<Equipment>> getRecommendations(String userId) async {
-    // Имитация получения рекомендаций
-    await Future.delayed(Duration(milliseconds: 500));
-    final allEquipment = getAllEquipment();
-    // В реальном приложении здесь была бы логика персонализации
-    return allEquipment.where((equipment) => equipment.rating >= 4.7).toList();
-  }
+Future<List<Equipment>> getRecommendations(String userId) async {
+  await Future.delayed(Duration(milliseconds: 500));
+  final allEquipment = getAllEquipment();
+  // Сортируем список так, чтобы рекомендуемые товары были вверху
+  allEquipment.sort((a, b) => b.rating.compareTo(a.rating));
+  return allEquipment;
+}
+
+
 }
 

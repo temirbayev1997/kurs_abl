@@ -11,15 +11,13 @@ import 'screens/cart_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  final notificationService = NotificationService();
-  await notificationService.initialize();
+
 
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => AuthService()),
         ChangeNotifierProvider(create: (_) => CartService()),
-        Provider<NotificationService>.value(value: notificationService),
       ],
       child: const MyApp(),
     ),

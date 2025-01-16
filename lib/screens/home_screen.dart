@@ -8,7 +8,6 @@ import '../models/user_loyalty.dart';
 import '../services/loyalty_service.dart';
 import '../widgets/loyalty_widget.dart';
 import '../models/category.dart';
-// AIzaSyDAKV-O_4Plg0wEUEK9RUL4nDKB0jo5kCI api keys - google maps
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -43,23 +42,28 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
   int get cartItemCount => _cartItems.length;
 
-  @override
-  void initState() {
-    super.initState();
-    userLoyalty = UserLoyalty();
-    _tabController = TabController(length: 2, vsync: this);
+@override
+void initState() {
+  super.initState();
+  userLoyalty = UserLoyalty();
+  _tabController = TabController(length: 2, vsync: this);
+  WidgetsBinding.instance.addPostFrameCallback((_) {
     _loadRecommendations();
-  }
+  });
+}
 
-  Future<void> _loadRecommendations() async {
-    setState(() => _isLoading = true);
-    try {
-      final recommendations = await _equipmentService.getRecommendations('user_id');
-      setState(() => _equipment = recommendations);
-    } finally {
-      setState(() => _isLoading = false);
-    }
+
+Future<void> _loadRecommendations() async {
+  setState(() => _isLoading = true);
+  try {
+    final allEquipment = _equipmentService.getAllEquipment();
+    setState(() => _equipment = allEquipment);
+  } finally {
+    setState(() => _isLoading = false);
   }
+}
+
+
 
 Future<void> _search(String? query) async {
   if (query == null) return;
@@ -120,16 +124,24 @@ void _showOrderHistory() {
 String _formatDate(DateTime date) {
   return '${date.day}.${date.month}.${date.year} ${date.hour}:${date.minute}';
 }
-void _filterEquipment() {
-  setState(() {
+
+void _filterEquipment() async {
+  setState(() => _isLoading = true);
+  try {
     if (_selectedCategory == null || _selectedCategory == 'Все') {
-      _loadRecommendations();
+      await _loadRecommendations();
     } else {
-      _equipment = _equipment.where((item) => 
-        item.category == _selectedCategory).toList();
+      final allEquipment = await _equipmentService.getRecommendations('user_id');
+      setState(() {
+        _equipment = allEquipment.where((item) => 
+          item.category == _selectedCategory).toList();
+      });
     }
-  });
+  } finally {
+    setState(() => _isLoading = false);
+  }
 }
+
 
 
 void _showOrderDetails(Map<String, dynamic> order) {
@@ -301,12 +313,12 @@ Column(
         ).toList(),
       ),
     ),
-    Expanded(
-      child: _isLoading
-          ? Center(child: CircularProgressIndicator())
-          : _equipment.isEmpty
-              ? Center(child: Text('Нет доступного инвентаря'))
-              : ListView.builder(
+Expanded(
+  child: _isLoading
+      ? Center(child: CircularProgressIndicator())
+      : _equipment.isEmpty
+          ? Center(child: Text('Нет доступного инвентаря'))
+          : ListView.builder(
                   itemCount: _equipment.length,
                   itemBuilder: (context, index) {
                     final item = _equipment[index];
